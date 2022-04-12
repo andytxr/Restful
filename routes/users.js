@@ -1,6 +1,6 @@
-module.exports= function(app){
+module.exports=(app)=>{
 
-    routes.get('/',(req,res) =>{
+    app.get('/users',(req,res) =>{
 
         res.statusCode=200;
         res.setHeader('Content-Type', 'application/html');
@@ -16,7 +16,7 @@ module.exports= function(app){
     
     });
     
-    routes.get('/admin', (req,res)=>{
+    app.get('/users/admin', (req,res)=>{
     
         res.statusCode=200;
         res.setHeader('Content-Type', 'application/html');

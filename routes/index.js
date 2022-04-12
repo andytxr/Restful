@@ -1,6 +1,6 @@
 module.exports=(app)=>{
 
-    routes.get('/', (req, res)=>{
+    app.get('/', (req, res)=>{
 
         res.statusCode=200;
         res.setHeader('Content-Type', 'text/html');

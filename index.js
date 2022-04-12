@@ -1,10 +1,9 @@
 const express = require("express");
-let routesU = require('./routes/users');
-let routesI = require('./routes/index')
+const consign = require("consign");
 
 let app = express();
-app.use('/users', routesU);
-app.use(routesI)
+
+consign().include('routes').into(app)
 
 app.listen(3000, "127.0.0.1", ()=>{
 
